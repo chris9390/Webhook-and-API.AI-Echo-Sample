@@ -26,7 +26,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
 restService.use(
   bodyParser.urlencoded({
-    extended: false
+    extended: true
   })
 );
 
