@@ -26,7 +26,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
 restService.use(
   bodyParser.urlencoded({
-    extended: true
+    extended: false
   })
 );
 
@@ -53,7 +53,7 @@ restService.post("/", function(req, res) {
               	  }
    };  
   
-  http.request("http://www.google.com", function(response) {
+  http.request("www.google.com", function(response) {
     var status = response.statusCode;
   });
 
