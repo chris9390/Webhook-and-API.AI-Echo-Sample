@@ -21,14 +21,13 @@ app.get('/', function (req, res) {
 });
 */
 
-	
+app.get('/',function(req,res){
+	res.write('Hi');
+});	
 
 
 
-
-
-
-app.get("/", function(req, res) {
+app.post("/", function(req, res) {
 
   const appKey = '1b4e36fb-2bb9-4380-8930-a63b1bfcefef';
   const lat_value = 40.1234;
