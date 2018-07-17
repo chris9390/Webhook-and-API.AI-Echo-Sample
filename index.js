@@ -26,7 +26,7 @@ restService.post("/weather", function(req, res) {
     	protocol : 'https:',
 	hostname : 'api2.sktelecom.com',
     	path : path_str,
-	method : 'GET',
+	//method : 'GET',
 	headers : {'Accept' : 'application/json', 
                    'Content-Type' : 'application/json; charset=utf-8', 
                    'appKey' : appKey
