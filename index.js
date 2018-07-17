@@ -50,7 +50,7 @@ app.get("/", function(req, res) {
   */
 	
 	getWeather(function(msg) {
-		res.send('msg');	
+		res.send(msg);	
 	});
   
   
