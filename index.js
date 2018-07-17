@@ -4,7 +4,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const restService = express();
 
-const https = require("https");
+const http = require("http");
 /*
 const functions = require('firebase-functions');
 const {WebhookClient} = require('dialogflow-fulfillment');
@@ -42,17 +42,17 @@ restService.post("/webhook", function(req, res) {
   path_str = '/weather/index/wct?version=1&lat=' + lat_value + '&lon=' + lon_value;
   
   var options = {
-    protocol : 'https:',
-	  hostname : 'api2.sktelecom.com',
-    path : path_str,
-	  method : 'GET',
-	  headers : {'Accept' : 'application/json', 
-               'Content-Type' : 'application/json; charset=utf-8', 
-               'appKey' : appKey
-              }
-  };  
+    	protocol : 'http:',
+	hostname : 'api2.sktelecom.com',
+    	path : path_str,
+	method : 'GET',
+	headers : {'Accept' : 'application/json', 
+                   'Content-Type' : 'application/json; charset=utf-8', 
+                   'appKey' : appKey
+              	  }
+   };  
   
-  req = https.request(options, function(res) {
+  req = http.request(options, function(res) {
     var status = res.statusCode;
   });
 
