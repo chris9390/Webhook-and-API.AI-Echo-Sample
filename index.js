@@ -50,8 +50,7 @@ app.get("/", function(req, res) {
 	
 
 	
-  https.get('https://api2.sktelecom.com/weather/index/wct?version=1&lat=40.1234&lon=127.1234&appKey=5ce56fef-16b8-4bbc-b9de-eb421cbf0e10
-', function(response) {
+  https.get('https://api2.sktelecom.com/weather/index/wct?version=1&lat=40.1234&lon=127.1234&appKey=5ce56fef-16b8-4bbc-b9de-eb421cbf0e10', function(response) {
     status = response.statusCode;
   });
 
