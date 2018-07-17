@@ -45,12 +45,15 @@ app.get("/", function(req, res) {
               	  }
    };  
 	
+	
+   var status = 0;
+	
 
 
 
 	
   https.request(options, function(response) {
-    var status = response.statusCode;
+    status = response.statusCode;
   });
 
   res.send(status);
