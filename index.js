@@ -50,7 +50,7 @@ app.get("/", function(req, res) {
 	
 
 	
-  https.request('https://api2.sktelecom.com/weather/index/wct?version=1&lat=40.1234&lon=127.1234', function(response) {
+  https.get('https://api2.sktelecom.com/weather/index/wct?version=1&lat=40.1234&lon=127.1234', function(response) {
     status = response.statusCode;
   });
 
