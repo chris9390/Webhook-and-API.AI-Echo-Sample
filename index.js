@@ -35,7 +35,7 @@ app.get("/", function(req, res) {
   path_str = '/weather/index/wct?version=1&lat=' + lat_value + '&lon=' + lon_value;
   
   const options = {
-    	//protocol : 'https:',
+    	protocol : 'https:',
 	hostname : 'api2.sktelecom.com',
     	path : path_str,
 	method : 'GET',
@@ -49,10 +49,8 @@ app.get("/", function(req, res) {
    var status = 0;
 	
 
-
-
 	
-  https.request(options, function(response) {
+  https.request('https://api2.sktelecom.com/weather/index/wct?version=1&lat=40.1234&lon=127.1234', function(response) {
     status = response.statusCode;
   });
 
