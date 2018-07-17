@@ -5,30 +5,11 @@ const bodyParser = require("body-parser");
 const restService = express();
 
 const https = require("https");
-/*
-const functions = require('firebase-functions');
-const {WebhookClient} = require('dialogflow-fulfillment');
-
-process.env.DEBUG = 'dialogflow:debug'; // enables lib debugging statements
-
-exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, response) => {
-  
- 
-  let intentMap = new Map();
-  intentMap.set('Default Welcome Intent', welcome);
-  intentMap.set('Default Fallback Intent', fallback);
-  
-  agent.handleRequest(intentMap);
-});*/
 
 
 
 
-restService.use(
-  bodyParser.urlencoded({
-    extended: false
-  })
-);
+restService.use(bodyParser.urlencoded({ extended: false }));
 
 restService.use(bodyParser.json());
 
@@ -45,7 +26,7 @@ restService.post("/", function(req, res) {
     	protocol : 'https:',
 	hostname : 'api2.sktelecom.com',
     	path : path_str,
-	method : 'GET',
+	method : 'POST',
 	json : true,
 	headers : {'Accept' : 'application/json', 
                    'Content-Type' : 'application/json; charset=utf-8', 
