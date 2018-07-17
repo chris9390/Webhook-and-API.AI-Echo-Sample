@@ -67,7 +67,7 @@ function getWeather(callback) {
  		 hostname: 'encrypted.google.com',
   		port: 443,
  		 path: '/',
- 		 method: 'GET'
+ 		// method: 'GET'
 	};	
 	
 	var req = https.request(options2, function(response) {
