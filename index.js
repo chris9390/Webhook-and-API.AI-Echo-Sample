@@ -33,7 +33,7 @@ restService.use(
 restService.use(bodyParser.json());
 
 
-restService.get("/webhook", function(req, res) {
+restService.post("/webhook", function(req, res) {
   return res.json({
     fulfillmentText : "!!!!!"
   });
