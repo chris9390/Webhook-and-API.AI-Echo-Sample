@@ -42,11 +42,13 @@ app.get("/weather", function(req, res) {
   
   
   return res.json({
-    fulfillmentText : status
+    fulfillmentText : status,
+    source : "WeatherBot"
   });
 });
 
 
+/*
 
 app.post("/echo", function(req, res) {
   var speech =
@@ -66,7 +68,7 @@ app.post("/echo", function(req, res) {
   });
 });
 
-
+*/
 
 
 app.listen(process.env.PORT || 8000, function() {
