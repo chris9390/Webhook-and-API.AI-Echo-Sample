@@ -4,7 +4,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const restService = express();
 
-const http = require("http");
+const https = require("https");
 /*
 const functions = require('firebase-functions');
 const {WebhookClient} = require('dialogflow-fulfillment');
@@ -42,7 +42,7 @@ restService.post("/", function(req, res) {
   path_str = '/weather/index/wct?version=1&lat=' + lat_value + '&lon=' + lon_value;
   
   var options = {
-    	protocol : 'http:',
+    	protocol : 'https:',
 	hostname : 'api2.sktelecom.com',
     	path : path_str,
 	method : 'GET',
@@ -53,7 +53,7 @@ restService.post("/", function(req, res) {
               	  }
    };  
   
-  http.get(options, function(response) {
+  https.get(options, function(response) {
     var status = response.statusCode;
   });
 
