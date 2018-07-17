@@ -13,9 +13,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(bodyParser.json());
 
-app.get('/', function (req, res) {
-    res.send("hi!")
-});
 
 
 app.get("/weather", function(req, res) {
