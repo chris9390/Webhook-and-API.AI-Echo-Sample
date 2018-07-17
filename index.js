@@ -42,7 +42,7 @@ restService.post("/webhook", function(req, res) {
   path_str = '/weather/index/wct?version=1&lat=' + lat_value + '&lon=' + lon_value;
   
   var options = {
-    protocol : 'http:',
+    protocol : 'https:',
 	  hostname : 'api2.sktelecom.com',
     path : path_str,
 	  method : 'GET',
