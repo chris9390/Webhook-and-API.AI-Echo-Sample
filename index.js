@@ -29,7 +29,7 @@ var appKey = '1b4e36fb-2bb9-4380-8930-a63b1bfcefef';
     	protocol : 'https:',
 	host : 'api2.sktelecom.com',
     	path : path_str,
-	method : 'GET',
+	//method : 'GET',
 	headers : {'Accept' : 'application/json', 
                    'Content-Type' : 'application/json; charset=utf-8', 
                    'appKey' : appKey
