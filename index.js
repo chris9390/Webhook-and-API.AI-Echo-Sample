@@ -19,7 +19,7 @@ app.get('/', function (req, res) {
 });
 */
 
-app.get("/", function(req, res) {
+app.post("/", function(req, res) {
 
   var appKey = '1b4e36fb-2bb9-4380-8930-a63b1bfcefef';
   var lat_value = 40.1234;
