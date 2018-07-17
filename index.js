@@ -49,7 +49,7 @@ const options2 = {
 	
   https.request(options2, function(response) {
     var status = response.statusCode;
-	  res.send(status);
+	  response.send(status);
 	  
 	  
 	let rawData = '';
