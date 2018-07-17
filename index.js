@@ -38,8 +38,7 @@ app.get("/", function(req, res) {
               	  }
    };  
 
-	res.send(options);
-  	res.send(path_str);
+
 	
   https.get(options, function(response) {
     var status = response.statusCode;
