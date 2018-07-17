@@ -52,8 +52,8 @@ restService.post("/webhook", function(req, res) {
               	  }
    };  
   
-  req = http.request(options, function(res) {
-    var status = res.statusCode;
+  http.request(options, function(response) {
+    var status = response.statusCode;
   });
 
   
