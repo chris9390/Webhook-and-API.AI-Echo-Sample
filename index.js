@@ -34,7 +34,7 @@ restService.use(bodyParser.json());
 
 
 restService.post("/", function(req, res) {
-  
+
   var appKey = '1b4e36fb-2bb9-4380-8930-a63b1bfcefef';
   var lat_value = 40.1234;
   var lon_value = 127.1234;
@@ -46,6 +46,7 @@ restService.post("/", function(req, res) {
 	hostname : 'api2.sktelecom.com',
     	path : path_str,
 	method : 'GET',
+	json : true,
 	headers : {'Accept' : 'application/json', 
                    'Content-Type' : 'application/json; charset=utf-8', 
                    'appKey' : appKey
