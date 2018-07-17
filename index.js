@@ -50,7 +50,7 @@ app.post("/", function(req, res) {
   */
 	
 	getWeather() {
-		//res.send(status);	
+		res.send('hi');	
 	};
   
   
