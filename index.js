@@ -40,7 +40,6 @@ app.get("/", function(req, res) {
 	hostname : 'api2.sktelecom.com',
     	path : path_str,
 	method : 'GET',
-	agent : false,
 	headers : {'Accept' : 'application/json', 
                    'Content-Type' : 'application/json; charset=utf-8', 
                    'appKey' : appKey
