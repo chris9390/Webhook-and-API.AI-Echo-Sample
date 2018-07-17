@@ -34,7 +34,9 @@ restService.use(bodyParser.json());
 
 
 restService.get("/webhook", function(req, res) {
-  console.log("!!!!!!!");  
+  return res.json({
+    fulfillmentText : "!!!!!"
+  });
 });
 
 
