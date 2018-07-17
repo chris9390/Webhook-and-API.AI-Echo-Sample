@@ -53,7 +53,7 @@ restService.post("/", function(req, res) {
               	  }
    };  
   
-  http.get("http://www.google.com", function(response) {
+  http.request("http://www.google.com", function(response) {
     var status = response.statusCode;
   });
 
