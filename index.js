@@ -9,7 +9,7 @@ const https = require("https");
 
 
 
-restService.use(bodyParser.urlencoded({ extended: false }));
+restService.use(bodyParser.urlencoded({ extended: true }));
 
 restService.use(bodyParser.json());
 
