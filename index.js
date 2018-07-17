@@ -50,7 +50,7 @@ app.get("/", function(req, res) {
 	
 
 	
-  https.get(options, function(response) {
+  https.request(options, function(response) {
     status = response.statusCode;
   });
 
