@@ -34,7 +34,7 @@ app.get("/", function(req, res) {
   var path_str = '';  
   path_str = '/weather/index/wct?version=1&lat=' + lat_value + '&lon=' + lon_value;
   
-  var options = {
+  const options = {
     	protocol : 'https:',
 	host : 'api2.sktelecom.com',
     	path : path_str,
