@@ -38,11 +38,11 @@ app.get('/', function (req, res) {
 	
 
 
+	  res.send(status);
 
 	
   https.request(options, function(response) {
     var status = response.statusCode;
-	  res.send(status);
   });
 
 
