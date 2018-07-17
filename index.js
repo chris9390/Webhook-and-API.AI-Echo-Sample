@@ -2,8 +2,31 @@
 
 const express = require("express");
 const bodyParser = require("body-parser");
-
 const restService = express();
+
+const functions = require('firebase-functions');
+const {WebhookClient} = require('dialogflow-fulfillment');
+
+process.env.DEBUG = 'dialogflow:debug'; // enables lib debugging statements
+
+exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, response) => {
+  
+  
+  
+  
+  
+  
+  
+  let intentMap = new Map();
+  intentMap.set('Default Welcome Intent', welcome);
+  intentMap.set('Default Fallback Intent', fallback);
+  
+  agent.handleRequest(intentMap);
+});
+
+
+
+
 
 restService.use(
   bodyParser.urlencoded({
