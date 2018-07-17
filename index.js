@@ -33,6 +33,12 @@ restService.use(
 restService.use(bodyParser.json());
 
 
+restService.get("/webhook", function(req, res) {
+  console.log("!!!!!!!");  
+});
+
+
+
 restService.post("/echo", function(req, res) {
   var speech =
     req.body.queryResult &&
