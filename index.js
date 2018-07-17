@@ -28,7 +28,7 @@ app.get('/', function (req, res) {
 
 app.get("/", function(req, res) {
 
-  var appKey = '1b4e36fb-2bb9-4380-8930-a63b1bfcefef';
+  var appKey = '5ce56fef-16b8-4bbc-b9de-eb421cbf0e10';
   var lat_value = 40.1234;
   var lon_value = 127.1234;
   var path_str = '';  
