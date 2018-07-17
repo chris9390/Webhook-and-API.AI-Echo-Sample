@@ -65,7 +65,7 @@ app.use("/", function(req, res) {
 
 
 
-/*
+
 
 app.post("/echo", function(req, res) {
   var speech =
@@ -80,12 +80,12 @@ app.post("/echo", function(req, res) {
     //speech: speech,
     //displayText: speech,
     //source: "webhook-echo-sample"
-    fulfillmentText: "what" + speech,
+    fulfillmentText: speech,
     source: "EchoService"
   });
 });
 
-*/
+
 
 
 app.listen(process.env.PORT || 8000, function() {
