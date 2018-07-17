@@ -49,9 +49,9 @@ app.post("/", function(req, res) {
 
   */
 	
-	getWeather() {
-		res.send('hi');	
-	};
+	getWeather(function(msg) {
+		res.send('msg');	
+	});
   
   
   return res.json({
@@ -62,7 +62,7 @@ app.post("/", function(req, res) {
 
 
 
-function getWeather() {
+function getWeather(callback) {
 	const options2 = {
  		 hostname: 'encrypted.google.com',
   		port: 443,
@@ -70,10 +70,20 @@ function getWeather() {
  		 method: 'GET'
 	};	
 	
-	https.request(options2, function(response) {
+	var req = https.request(options2, function(response) {
     		var status = response.statusCode;
 	  	console.log(status);
  	 });
+	
+	
+	req.on('error',function(err){
+		console.log('Error in HTTP request  '+err);
+		callback(0);
+	});
+		
+	
+	req.end();
+	callback(0);
 	
 };
 
