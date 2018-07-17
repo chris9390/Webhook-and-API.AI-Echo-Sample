@@ -14,7 +14,7 @@ restService.use(bodyParser.urlencoded({ extended: true }));
 restService.use(bodyParser.json());
 
 
-restService.post("/weather", function(req, res) {
+restService.get("/weather", function(req, res) {
 
   var appKey = '1b4e36fb-2bb9-4380-8930-a63b1bfcefef';
   var lat_value = 40.1234;
@@ -26,14 +26,14 @@ restService.post("/weather", function(req, res) {
     	protocol : 'https:',
 	hostname : 'api2.sktelecom.com',
     	path : path_str,
-	method : 'POST',
+	method : 'GET',
 	headers : {'Accept' : 'application/json', 
                    'Content-Type' : 'application/json; charset=utf-8', 
                    'appKey' : appKey
               	  }
    };  
   
-  https.request(options, function(response) {
+  https.get(options, function(response) {
     var status = response.statusCode;
   });
 
