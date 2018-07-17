@@ -28,13 +28,12 @@ app.get('/', function (req, res) {
 
 
 
-app.post("/", function(req, res) {
+app.get("/", function(req, res) {
 
-  var appKey = '1b4e36fb-2bb9-4380-8930-a63b1bfcefef';
-  var lat_value = 40.1234;
-  var lon_value = 127.1234;
-  var path_str = '';  
-  path_str = '/weather/index/wct?version=1&lat=' + lat_value + '&lon=' + lon_value;
+  const appKey = '1b4e36fb-2bb9-4380-8930-a63b1bfcefef';
+  const lat_value = 40.1234;
+  const lon_value = 127.1234;
+  const path_str = '/weather/index/wct?version=1&lat=' + lat_value + '&lon=' + lon_value;  
   
   const options = {
     	protocol : 'https:',
