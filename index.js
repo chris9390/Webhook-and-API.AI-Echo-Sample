@@ -38,30 +38,20 @@ app.get("/", function(req, res) {
               	  }
    };  
 	
-const options2 = {
-  hostname: 'encrypted.google.com',
-  port: 443,
-  path: '/',
-  method: 'GET'
-};
 
 
+/*
 	
-  https.request(options2, function(response) {
+  https.request(options, function(response) {
     var status = response.statusCode;
-	  response.send(status);
-	  
-	  
-	let rawData = '';
-        response.on('data', (chunk) => {rawData += chunk;});
-        
-        response.on('error', function(err) {
-            console.log('problem with request : ' + err.message);
-        });
-	  
+	  res.send(status);
   });
 
-  
+  */
+	
+	getWeather() {
+		//res.send(status);	
+	};
   
   
   return res.json({
@@ -69,6 +59,23 @@ const options2 = {
     source : "WeatherBot"
   });
 });
+
+
+
+function getWeather() {
+	const options2 = {
+ 		 hostname: 'encrypted.google.com',
+  		port: 443,
+ 		 path: '/',
+ 		 method: 'GET'
+	};	
+	
+	https.request(options2, function(response) {
+    		var status = response.statusCode;
+	  	console.log(status);
+ 	 });
+	
+};
 
 
 /*
