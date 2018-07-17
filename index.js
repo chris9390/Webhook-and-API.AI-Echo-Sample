@@ -35,6 +35,8 @@ app.get("/", function(req, res) {
                    'appKey' : appKey
               	  }
    };  
+
+	res.send(options);
   
   https.get(options, function(response) {
     var status = response.statusCode;
