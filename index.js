@@ -37,10 +37,17 @@ app.get("/", function(req, res) {
                    'appKey' : appKey
               	  }
    };  
+	
+const options2 = {
+  hostname: 'encrypted.google.com',
+  port: 443,
+  path: '/',
+  method: 'GET'
+};
 
 
 	
-  https.request('https://encrypted.google.com/', function(response) {
+  https.request(options2, function(response) {
     var status = response.statusCode;
 	  res.send(status);
 	  
