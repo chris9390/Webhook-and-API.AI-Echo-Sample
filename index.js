@@ -29,7 +29,7 @@ app.get("/", function(req, res) {
   
   var options = {
     	protocol : 'https:',
-	hostname : 'api2.sktelecom.com',
+	host : 'api2.sktelecom.com',
     	path : path_str,
 	method : 'GET',
 	headers : {'Accept' : 'application/json', 
@@ -40,7 +40,7 @@ app.get("/", function(req, res) {
 
 
 	
-  https.request(options, function(response) {
+  https.get(options, function(response) {
     var status = response.statusCode;
 	  res.send(status);
   });
