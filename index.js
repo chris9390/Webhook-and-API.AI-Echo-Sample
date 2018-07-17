@@ -4,6 +4,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const restService = express();
 
+/*
 const functions = require('firebase-functions');
 const {WebhookClient} = require('dialogflow-fulfillment');
 
@@ -22,8 +23,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
   intentMap.set('Default Fallback Intent', fallback);
   
   agent.handleRequest(intentMap);
-});
-
+});*/
 
 
 
