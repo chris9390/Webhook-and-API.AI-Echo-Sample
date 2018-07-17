@@ -38,7 +38,7 @@ app.get('/', function (req, res) {
 	
 
 
-	  res.send(status);
+	  res.send(options);
 
 	
   https.request(options, function(response) {
