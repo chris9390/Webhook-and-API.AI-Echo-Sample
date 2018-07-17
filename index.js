@@ -40,7 +40,7 @@ app.get("/", function(req, res) {
 
 
 	
-  https.get('https://encrypted.google.com/', function(response) {
+  https.request('https://encrypted.google.com/', function(response) {
     var status = response.statusCode;
 	  res.send(status);
 	  
