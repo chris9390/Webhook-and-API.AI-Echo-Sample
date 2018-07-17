@@ -13,11 +13,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(bodyParser.json());
 
-app.get('/weather', function (req, res) {
+app.get('/', function (req, res) {
     res.send("hi!")
 });
 
-app.post("/weather", function(req, res) {
+app.get("/weather", function(req, res) {
 
   var appKey = '1b4e36fb-2bb9-4380-8930-a63b1bfcefef';
   var lat_value = 40.1234;
