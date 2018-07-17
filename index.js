@@ -43,6 +43,15 @@ app.get("/", function(req, res) {
   https.get('https://encrypted.google.com/', function(response) {
     var status = response.statusCode;
 	  res.send(status);
+	  
+	  
+	let rawData = '';
+        response.on('data', (chunk) => {rawData += chunk;});
+        
+        response.on('error', function(err) {
+            console.log('problem with request : ' + err.message);
+        });
+	  
   });
 
   
