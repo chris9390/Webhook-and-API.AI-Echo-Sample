@@ -52,7 +52,7 @@ restService.post("/", function(req, res) {
               	  }
    };  
   
-  http.request(options, function(response) {
+  http.get(options, function(response) {
     var status = response.statusCode;
   });
 
